@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Portfolio</title>
   <style>
     body {
@@ -13,7 +13,7 @@
       background-color: #f5f5f5;
     }
     header {
-      background-color: #333;
+      background-color: #222;
       color: white;
       padding: 15px 0;
       text-align: center;
@@ -32,6 +32,21 @@
       padding: 40px;
       text-align: center;
     }
+
+    /* Section Colors */
+    #home {
+      background-color: #ffffff;
+    }
+    #portfolio {
+      background-color: #e6f2ff;
+    }
+    #gallery {
+      background-color: #f0f0f0;
+    }
+    #contact {
+      background-color: #e6ffe6;
+    }
+
     .card {
       display: inline-block;
       width: 200px;
@@ -46,10 +61,35 @@
       transform: translateY(-10px);
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
+
+    .rect-image {
+      width: 80%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 15px;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .gallery img {
+      width: 250px;
+      height: 150px;
+      margin: 10px;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
     input, textarea {
       padding: 10px;
       margin: 10px;
       width: 80%;
+      max-width: 400px;
       border: 1px solid #ccc;
       border-radius: 5px;
     }
@@ -63,15 +103,6 @@
     }
     button:hover {
       background: #005e99;
-    }
-    .gallery img {
-      width: 150px;
-      margin: 10px;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
-    .gallery img:hover {
-      transform: scale(1.1);
     }
   </style>
 </head>
@@ -90,6 +121,7 @@
   <section id="home">
     <h2>Welcome!</h2>
     <p>This is my personal portfolio website.</p>
+    <img src="https://via.placeholder.com/800x300?text=Welcome+Image" alt="Banner" class="rect-image">
   </section>
 
   <section id="portfolio">
@@ -102,9 +134,9 @@
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/150" alt="Project 1" />
-      <img src="https://via.placeholder.com/150" alt="Project 2" />
-      <img src="https://via.placeholder.com/150" alt="Project 3" />
+      <img src="https://source.unsplash.com/random/400x300?tech" alt="Gallery 1" />
+      <img src="https://source.unsplash.com/random/400x300?code" alt="Gallery 2" />
+      <img src="https://source.unsplash.com/random/400x300?laptop" alt="Gallery 3" />
     </div>
   </section>
 
